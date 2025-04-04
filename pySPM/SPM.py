@@ -449,7 +449,8 @@ class SPM_image:
         x = np.arange(self.pixels.shape[1])
         y = np.arange(self.pixels.shape[0])
         #I = scipy.interpolate.interp2d(x, y, np.flipud(self.pixels))
-        I = scipy.interpolate.RegularGridInterpolator((x, y), np.flipud(self.pixels), bounds_error=False, fill_value=None)
+        #I = scipy.interpolate.RegularGridInterpolator((x, y), np.flipud(self.pixels), bounds_error=False, fill_value=None)
+        I = scipy.interpolate.RectBivariateSpline(x, y, np.fluid(self.pixels))
 
         Y = np.arange(y1, y2 + 1)
         V = np.zeros(len(Y))
