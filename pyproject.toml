@@ -13,7 +13,7 @@ keywords = ["ToF", "SIMS", "ION-ToF", "SPM", "SFM", "SXM", "AFM", "KPFM", "PCA",
 packages = [{ include = "pySPM" }]
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.13"
+python = ">=3.10"
 scikit-learn = "^1.2.2"
 scikit-image = ">=0.25.0"
 numpy = "^2.2.4"
